@@ -71,7 +71,8 @@
      /* Enhanced Logo with Glow */
      .logo-container {
          position: relative;
-         margin-bottom: 20px;
+         margin-top: 10px;
+         margin-bottom: 10px;
          animation: logoFloat 3s ease-in-out infinite;
      }
 
@@ -283,27 +284,6 @@
          overflow: hidden;
      }
 
-     /* Animated gradient border for popular cards */
-     .feature-card.popular {
-         border: 2px solid transparent;
-         background:
-             linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08)),
-             linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4d9de0, #ff6b6b);
-         background-origin: border-box;
-         background-clip: padding-box, border-box;
-         animation: borderRotate 4s linear infinite;
-     }
-
-     @keyframes borderRotate {
-         0% {
-             background-position: 0% 50%, 0% 50%;
-         }
-
-         100% {
-             background-position: 100% 50%, 400% 50%;
-         }
-     }
-
      /* Subtle inner glow effect */
      .feature-card::before {
          content: '';
@@ -323,13 +303,6 @@
              inset 0 2px 4px rgba(0, 0, 0, 0.1);
      }
 
-     .feature-card.popular:active {
-         box-shadow:
-             0 4px 16px rgba(255, 215, 0, 0.6),
-             0 0 30px rgba(255, 215, 0, 0.5),
-             inset 0 2px 4px rgba(0, 0, 0, 0.1);
-     }
-
      /* Icon styling */
      .feature-icon-img {
          width: 50px;
@@ -342,17 +315,12 @@
          position: relative;
          z-index: 1;
      }
-
-     .feature-card.popular .feature-icon-img {
-         filter:
-             drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
-     }
-
-     .feature-card:active .feature-icon-img {
-         transform: scale(1.1);
-         filter:
-             drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
-     }
+ .feature-card:active .feature-icon-img {
+    transform: scale(1.1);
+    filter:
+        drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4)) 
+        drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+}
 
      .feature-title {
          color: #ffffff;
@@ -363,21 +331,11 @@
          transition: all 0.3s ease;
      }
 
-     .feature-card.popular .feature-title {
-         color: #ffd93d;
-         text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.3);
-     }
-
      .feature-desc {
          color: rgba(255, 255, 255, 0.9);
          font-size: 0.9rem;
          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
          transition: all 0.3s ease;
-     }
-
-     .feature-card.popular .feature-desc {
-         color: rgba(255, 255, 255, 1);
-         text-shadow: 1px 1px 4px rgba(255, 215, 0, 0.2);
      }
 
      /* Mobile specific adjustments */
